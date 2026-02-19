@@ -14,7 +14,7 @@ backend/__pycache__/
 backend/data/brad.txt
 backend/data/ronaldo.txt
 **/node_modules/
-stacked_classifier.joblib
+/stacked_classifier.joblib
 test_pics/
 images_cropped/
 image_dataset/

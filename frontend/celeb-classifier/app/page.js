@@ -13,7 +13,7 @@ export default function SportsClassifier() {
     try {
       // Just a simple ping to the base URL or a health route
       await fetch(process.env.NEXT_PUBLIC__BACKEND_URL + '/health');
-      console.log("Backend is awake and ready!");
+      console.log("Server is awake and ready!");
     } catch (e) {
       console.log("Server is still warming up...");
     }
@@ -58,7 +58,7 @@ export default function SportsClassifier() {
       console.log("Classification result:", data);
     } catch (error) {
       console.error("Upload failed:", error);
-      alert("Backend server not reached. Is Flask running?");
+      alert("server not reached, please try again later");
     } finally {
       setLoading(false);
     }
@@ -67,8 +67,8 @@ export default function SportsClassifier() {
   return (
     <div className="flex flex-col items-center min-h-screen bg-slate-50 py-12 px-4">
       <div className="w-full max-w-xl bg-white rounded-2xl shadow-xl p-8 border border-slate-200">
-        <h1 className="text-2xl font-bold text-slate-800 mb-2 text-center">Sport Classifier AI</h1>
-        <p className="text-slate-500 mb-8 text-center">Upload an action shot to identify the sport</p>
+        <h1 className="text-2xl font-bold text-slate-800 mb-2 text-center">Celebrity Classifier</h1>
+        <p className="text-slate-500 mb-8 text-center">Upload a celebrity image to identify the person</p>
 
         {/* Drag & Drop Area */}
         <div 
